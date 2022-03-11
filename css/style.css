@@ -11,21 +11,26 @@ div {
     margin-left: 50vw;
     width: 80vh;
     height: 40vh;
-    transform: translateX(-50%);
-    transform: translateY(-50%);
 }
 
 .huit {
     position: relative;
-    width: 11vh;
+    width: 100px;
     height: 40vh;
     display: inline-block;
+}
+
+.huit:nth-child(2) {
+    margin: 0 10px;
+}
+.huit:nth-child(4) {
+    margin: 0 10px;
 }
 
 .vertical-left {
     display: inline-block;
     position: absolute;
-    width: 1vw;
+    width: 10px;
     height: 20vh;
     background-color: red;
     clip-path: polygon(100% 10%, 100% 90%, 0 100%, 0 0);
@@ -34,7 +39,7 @@ div {
 .vertical-right {
     position: absolute;
     display: inline-block;
-    width: 1vw;
+    width: 10px;
     height: 20vh;
     background-color: red;
     clip-path: polygon(100% 0, 100% 100%, 0 90%, 0 10%);
@@ -43,7 +48,7 @@ div {
 .horizontal-top {
     display: inline-block;
     position: absolute;
-    width: 8vw;
+    width: 100px;
     height: 1vh;
     background-color: red;
     clip-path: polygon(100% 0, 90% 100%, 10% 100%, 0 0);
@@ -52,7 +57,7 @@ div {
 .horizontal-bottom {
     display: inline-block;
     position: absolute;
-    width: 8vw;
+    width: 100px;
     height: 1vh;
     background-color: red;
     clip-path: polygon(90% 0, 100% 100%, 0 100%, 10% 0);
@@ -61,7 +66,7 @@ div {
 .middle {
     display: inline-block;
     position: absolute;
-    width: 8vw;
+    width: 100px;
     height: 1vh;
     background-color: red;
     clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
