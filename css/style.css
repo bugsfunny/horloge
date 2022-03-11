@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(40, 43, 46);
+}
+
+div {
+    margin: 0;
+}
+
+.horloge {
+    margin-top: 50vh;
+    margin-left: 50vw;
+    width: 80vh;
+    height: 40vh;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+}
+
+.huit {
+    position: relative;
+    width: 11vh;
+    height: 40vh;
+    display: inline-block;
+}
+
+.vertical-left {
+    display: inline-block;
+    position: absolute;
+    width: 1vw;
+    height: 20vh;
+    background-color: red;
+    clip-path: polygon(100% 10%, 100% 90%, 0 100%, 0 0);
+}
+
+.vertical-right {
+    position: absolute;
+    display: inline-block;
+    width: 1vw;
+    height: 20vh;
+    background-color: red;
+    clip-path: polygon(100% 0, 100% 100%, 0 90%, 0 10%);
+}
+
+.horizontal-top {
+    display: inline-block;
+    position: absolute;
+    width: 8vw;
+    height: 1vh;
+    background-color: red;
+    clip-path: polygon(100% 0, 90% 100%, 10% 100%, 0 0);
+}
+
+.horizontal-bottom {
+    display: inline-block;
+    position: absolute;
+    width: 8vw;
+    height: 1vh;
+    background-color: red;
+    clip-path: polygon(90% 0, 100% 100%, 0 100%, 10% 0);
+}
+
+.middle {
+    display: inline-block;
+    position: absolute;
+    width: 8vw;
+    height: 1vh;
+    background-color: red;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    top: 50%;
+}
+
+.left {
+    left: 0;
+}
+.top {
+    top: 0;
+}
+.right {
+    right: 0;
+}
+.bottom {
+    bottom: 0;
+}
+
+.separator {
+    display: inline-block;
+}
+
+.dot {
+    background-color: red;
+    width: 1vh;
+    height: 1vw;
+}
+
+.separator .dot:first-of-type {
+    margin-bottom: 1vh;
+}
+
+.separator .dot:last-of-type {
+    margin-bottom: 18vh;
+}
