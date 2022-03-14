@@ -35,7 +35,7 @@ function convertCounterToString(minutes, secondes){
     } else {
         minutes = "" + minutes;
     }
-    if(minutes < 10){
+    if(secondes < 10){
         secondes = "0" + secondes;
     } else {
         secondes = "" + secondes;
