@@ -1,33 +1,60 @@
-let hours = 24;
-let minutes = 0;
+let minutes = 24;
+let secondes = 0;
 
-counter = setInterval(decrement, 10);
+const tiles = document.getElementsByClassName('tile');
+for (const tile of tiles) {
+    tile.classList.add('grey');
+}
+
+const huits = document.getElementsByClassName('huit');
+
+function getHuitTiles(position){
+    return huits[position].children;
+}
+
+counter = setInterval(decrement, 1000);
 
 function decrement(){
-    if(hours > 0 || minutes > 0){
-        if(minutes > 0){
-            minutes --;
+    if(minutes > 0 || secondes > 0){
+        if(secondes > 0){
+            secondes --;
         } else {
-            minutes = 59;
-            hours --;
+            secondes = 59;
+            minutes --;
         }
-        const time = convertCounterToString(hours, minutes);
-        console.log(time)
+        const time = convertCounterToString(minutes, secondes);
+        render(time);
     } else {
         clearInterval(counter);
     }
 }
 
-function convertCounterToString(hours, minutes){
-    if(hours < 10){
-        hours = "0" + hours;
-    } else {
-        hours = "" + hours;
-    }
+function convertCounterToString(minutes, secondes){
     if(minutes < 10){
         minutes = "0" + minutes;
     } else {
         minutes = "" + minutes;
     }
-    return hours+ minutes;
+    if(minutes < 10){
+        secondes = "0" + secondes;
+    } else {
+        secondes = "" + secondes;
+    }
+    return minutes+ secondes;
+}
+
+
+function render(time){
+    for (let index = 0; index < time.length; index++) {
+        const number = time[index];
+        const tiles = getHuitTiles(index);
+        for (const tile of tiles) {
+            if(tile.classList[1].includes(number)){
+                tile.classList.add('red');
+            } else {
+                tile.classList.remove('red');
+            }
+        }
+
+    }
 }
